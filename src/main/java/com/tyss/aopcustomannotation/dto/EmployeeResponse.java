@@ -13,5 +13,6 @@ import java.util.List;
 public class EmployeeResponse {
     private String id;
     private String name;
-    private List<Qualification>  qualification;
+    private List<Qualification> qualification;
+
 }

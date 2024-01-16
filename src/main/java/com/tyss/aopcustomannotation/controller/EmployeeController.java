@@ -16,6 +16,7 @@ import java.util.List;
 public class EmployeeController {
 
     private EmployeeService employeeService;
+
     @Autowired
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
@@ -52,7 +53,7 @@ public class EmployeeController {
     }
 
     @PatchMapping("/{name}/{instituteName}")
-    public ResponseEntity<ResponseStructure<String>> updateInstitute(@RequestBody Institute institute,@PathVariable String name,@PathVariable String instituteName) {
+    public ResponseEntity<ResponseStructure<String>> updateInstitute(@RequestBody Institute institute, @PathVariable String name, @PathVariable String instituteName) {
         return employeeService.updateInstitute(institute, name, instituteName);
     }
 }
